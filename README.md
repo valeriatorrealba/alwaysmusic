@@ -40,6 +40,31 @@ A continuación, se muestra la imagen del resultado codificado:
 - **pg**: Paquete para interactuar con bases de datos PostgreSQL desde Node.js.
 - **PostgreSQL**: Sistema de gestión de bases de datos relacional utilizado para almacenar los datos de los estudiantes.
 
+## Instrucciones para Ejecutar el Proyecto
+
+1. **Instalación de Dependencias**:
+   - Clona el repositorio y navega al directorio del proyecto.
+   - Ejecuta `npm install` para instalar las dependencias necesarias.
+
+2. **Configurar la Base de Datos**:
+   - Crea una base de datos PostgreSQL y una tabla con las siguientes columnas: Nombre, Rut, Curso, Nivel.
+   - Usa las siguientes sentencias SQL para crear la tabla:
+     ```sql
+     CREATE TABLE estudiantes (
+       id SERIAL PRIMARY KEY,
+       nombre VARCHAR(100),
+       rut VARCHAR(20) UNIQUE,
+       curso VARCHAR(50),
+       nivel VARCHAR(50)
+     );
+     ```
+
+3. **Ejecutar el Servidor**:
+   - Ejecuta `node index.js` para iniciar el script y realizar las operaciones CRUD desde la línea de comandos.
+
+4. **Uso de las Funciones**:
+   - Utiliza las funciones proporcionadas en el archivo `index.js` para interactuar con la base de datos. Puedes ejecutar el script y pasar argumentos desde la línea de comandos para probar cada funcionalidad.
+
 ## Autor
 
 Este proyecto fue desarrollado por **Valeria Torrealba**.
